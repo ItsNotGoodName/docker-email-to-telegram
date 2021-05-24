@@ -1,0 +1,7 @@
+smtpd_relay_restrictions = permit_sasl_authenticated reject_unauth_destination
+
+# enable sasl authentication when client connects to postfix
+smtpd_sasl_auth_enable = yes
+
+# send all mail to telegram
+virtual_alias_maps = pcre:/etc/postfix/virtual
